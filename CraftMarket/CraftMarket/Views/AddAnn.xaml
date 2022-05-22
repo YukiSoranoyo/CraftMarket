@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CraftMarket.Views.AddAnn">
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout>
             <StackLayout Margin="20">
                 <Editor Placeholder="Название"
@@ -23,6 +24,8 @@
                     HeightRequest="40"/>
                 <Image x:Name="image"
                        Source="{Binding ImageName}"/>
+                <Button Text="Сделать фото"
+                        Clicked="btnTakeAsync"/>
                 <Button Text="Выбрать фото"
                         Clicked="btnGetAsync"/>
                 <Grid ColumnDefinitions="*,*">
@@ -34,5 +37,6 @@
                 </Grid>
             </StackLayout>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
