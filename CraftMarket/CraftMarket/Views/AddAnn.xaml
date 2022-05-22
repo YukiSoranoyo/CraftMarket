@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CraftMarket.Views.AddAnn">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="20">
+                <Editor Placeholder="Название"
+                    Text="{Binding Name}"
+                    TextColor="Black"
+                    HeightRequest="40"/>
+                <Editor Placeholder="Описание"
+                    Text="{Binding Description}"
+                    TextColor="Black"
+                    HeightRequest="40"/>
+                <Editor Placeholder="Адрес"
+                    Text="{Binding Address}"
+                    TextColor="Black"
+                    HeightRequest="40"/>
+                <Editor Placeholder="Цена"
+                    Text="{Binding Price}"
+                    TextColor="Black"
+                    HeightRequest="40"/>
+                <Image x:Name="image"
+                       Source="{Binding ImageName}"/>
+                <Button Text="Выбрать фото"
+                        Clicked="btnGetAsync"/>
+                <Grid ColumnDefinitions="*,*">
+                    <Button Text="Сохранить"
+                            Clicked="OnSaveButton_Clicked"/>
+                    <Button Grid.Column="1"
+                            Text="Удалить"
+                            Clicked="OnDeleteButton_Clicked"/>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
