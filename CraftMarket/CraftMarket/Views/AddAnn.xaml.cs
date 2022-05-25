@@ -44,23 +44,8 @@ namespace CraftMarket.Views
         private async void OnSaveButton_Clicked(object sender, EventArgs e)
         {
             Announcement ann = (Announcement)BindingContext;
-            if (!string.IsNullOrWhiteSpace(ann.Name))
-            {
-                await App.AnnDB.SaveAnnAsync(ann);
-            }
-            if (!string.IsNullOrWhiteSpace(ann.Description))
-            {
-                await App.AnnDB.SaveAnnAsync(ann);
-            }
-            if (!string.IsNullOrWhiteSpace(ann.Address))
-            {
-                await App.AnnDB.SaveAnnAsync(ann);
-            }
-            if (!string.IsNullOrWhiteSpace(ann.Price))
-            {
-                await App.AnnDB.SaveAnnAsync(ann);
-            }
-            if (!string.IsNullOrWhiteSpace(ann.ImageName))
+            if (!string.IsNullOrWhiteSpace(ann.Name) && !string.IsNullOrWhiteSpace(ann.Description) && !string.IsNullOrWhiteSpace(ann.Address) &&
+                !string.IsNullOrWhiteSpace(ann.Price) && !string.IsNullOrWhiteSpace(ann.ImageName))
             {
                 await App.AnnDB.SaveAnnAsync(ann);
             }
